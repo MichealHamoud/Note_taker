@@ -3,7 +3,7 @@ const express = require('express');
 // defining router function
 const router = express.Router();
 //importing local modules
-const dbNotes = require('../db/notes.json')
+const dbNotes = require('../db/db.json')
 const { writeNewNote, removeNote } = require('../notes');
 
 //routes for reading, adding and deleting notes

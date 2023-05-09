@@ -7,8 +7,8 @@ const express = require('express');
 const app = express();
 
 //importing routes
-const htmlRoutes = require('./routes/htmlRoutes')
-const apiRoutes = require('./routes/apiRoutes')
+const HTML_routes = require('./routes/HTML_routes')
+const Api_routes = require('./routes/Api_routes')
 
 // middleware for parsing
 app.use(express.urlencoded({ extended: true }));
@@ -17,8 +17,8 @@ app.use(express.json());
 //middleware for public folder and routes
 app.use(express.static('public'));
 
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+app.use('/api', Api_routes);
+app.use('/', HTML_routes);
 // initialising Server
 app.listen(PORT, () => {
     console.log(`API server is running on port ${PORT}!`);
